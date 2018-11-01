@@ -1,7 +1,7 @@
 version: '3'
 services:
   routinator:
-    image: 'routinator'
+    image: 'lspgn/routinator'
     command: -r -l 0.0.0.0:3323 -v
     ports:
       - '3323:3323'
