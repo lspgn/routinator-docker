@@ -2,8 +2,10 @@ version: '3'
 services:
   routinator:
     image: 'lspgn/routinator'
-    command: -r -l 0.0.0.0:3323 -v
+    command: -r -l 0.0.0.0:3323 -v -c /cache -o /output/output.json
     ports:
       - '3323:3323'
     volumes:
-      - ./arin-rfc7730.tal:/root/.rpki-cache/tals/arin.tal
+      - ./tals:/root/.rpki-cache/tals/
+      - ./cache:/cache/
+      - ./output:/output/

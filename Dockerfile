@@ -1,8 +1,7 @@
 FROM library/rust
 
 RUN apt-get update && \
+    apt-get install -y rsync && \
     cargo install routinator
-
-RUN apt-get install -y rsync
 
 ENTRYPOINT [ "routinator" ]

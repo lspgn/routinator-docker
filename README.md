@@ -12,7 +12,7 @@ docker build -t lspgn/routinator .
 
 ## Run it
 
-You will have to download the ARIN TAL [here](https://www.arin.net/resources/rpki/tal.html) and put it in the local directory.
+You will have to download the ARIN TAL [here](https://www.arin.net/resources/rpki/tal.html) and put it in the /tal directory.
 Then
 
 ```
@@ -20,5 +20,5 @@ docker-compose up
 ```
 or
 ```
-docker run -p 3323:3323 -v $PWD/arin-rfc7730.tal:/root/.rpki-cache/tals/arin.tal lspgn/routinator
+docker run -p 3323:3323 -v $PWD/tals:/tals lspgn/routinator
 ```
