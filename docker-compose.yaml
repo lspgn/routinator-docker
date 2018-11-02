@@ -2,7 +2,7 @@ version: '3'
 services:
   routinator:
     image: 'lspgn/routinator'
-    command: -r -l 0.0.0.0:3323 -v -c /cache -o /output/output.json
+    command: -r -l 0.0.0.0:3323 -v -c /cache -o /output/output.json -f json
     ports:
       - '3323:3323'
     volumes:
